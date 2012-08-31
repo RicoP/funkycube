@@ -81,13 +81,13 @@ var Funkycube;
 					return getCanvasCoordinate(5, x, FACE_WIDTH + y); 
 				
 					case 1: 
-					return getCanvasCoordinate(0, -y ,x); 
+					return getCanvasCoordinate(0, -y-1 ,x); 
 					
 					case 2:
 					return getCanvasCoordinate(0, x, FACE_WIDTH + y); 
 
 					case 3: 
-					return getCanvasCoordinate(0, FACE_WIDTH + y, FACE_WIDTH - x);
+					return getCanvasCoordinate(0, FACE_WIDTH + y, FACE_WIDTH - 1 - x);
 
 					case 4: 
 					return getCanvasCoordinate(2, x, FACE_WIDTH + y); 
@@ -102,7 +102,7 @@ var Funkycube;
 			if(x >= FACE_WIDTH) {
 				switch(face) {
 					case 0: 
-					return getCanvasCoordinate(3, FACE_WIDTH - y, x - FACE_WIDTH);
+					return getCanvasCoordinate(3, FACE_WIDTH - 1 - y, x - FACE_WIDTH);
 				
 					case 1: 
 					return getCanvasCoordinate(2, x - FACE_WIDTH, y); 
@@ -111,13 +111,13 @@ var Funkycube;
 					return getCanvasCoordinate(3, x - FACE_WIDTH, y); 
 
 					case 3: 
-					return getCanvasCoordinate(5, 2*FACE_WIDTH-1 - x, FACE_WIDTH - y); 
+					return getCanvasCoordinate(5, 2*FACE_WIDTH-1 - x, FACE_WIDTH - 1 - y); 
 
 					case 4: 
 					return getCanvasCoordinate(3, y, 2*FACE_WIDTH-1 - x);
 
 					case 5: 
-					return getCanvasCoordinate(3, 2*FACE_WIDTH-1 - x, FACE_WIDTH - y);
+					return getCanvasCoordinate(3, 2*FACE_WIDTH-1 - x, FACE_WIDTH - 1 - y);
 
 					default: throw new RangeError(); 
 				}
@@ -129,7 +129,7 @@ var Funkycube;
 					return getCanvasCoordinate(2, x, y - FACE_WIDTH); 
 				
 					case 1: 
-					return getCanvasCoordinate(4, y - FACE_WIDTH, FACE_WIDTH - x - 1); 
+					return getCanvasCoordinate(4, y - FACE_WIDTH, FACE_WIDTH - 1 - x); 
 					
 					case 2:
 					return getCanvasCoordinate(4, x, y - FACE_WIDTH); 

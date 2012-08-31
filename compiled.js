@@ -46,11 +46,11 @@ var Funkycube;
      case 0:
      return getCanvasCoordinate(5, x, 16 + y);
      case 1:
-     return getCanvasCoordinate(0, -y ,x);
+     return getCanvasCoordinate(0, -y-1 ,x);
      case 2:
      return getCanvasCoordinate(0, x, 16 + y);
      case 3:
-     return getCanvasCoordinate(0, 16 + y, 16 - x);
+     return getCanvasCoordinate(0, 16 + y, 16 - 1 - x);
      case 4:
      return getCanvasCoordinate(2, x, 16 + y);
      case 5:
@@ -61,17 +61,17 @@ var Funkycube;
    if(x >= 16) {
     switch(face) {
      case 0:
-     return getCanvasCoordinate(3, 16 - y, x - 16);
+     return getCanvasCoordinate(3, 16 - 1 - y, x - 16);
      case 1:
      return getCanvasCoordinate(2, x - 16, y);
      case 2:
      return getCanvasCoordinate(3, x - 16, y);
      case 3:
-     return getCanvasCoordinate(5, 2*16 -1 - x, 16 - y);
+     return getCanvasCoordinate(5, 2*16 -1 - x, 16 - 1 - y);
      case 4:
      return getCanvasCoordinate(3, y, 2*16 -1 - x);
      case 5:
-     return getCanvasCoordinate(3, 2*16 -1 - x, 16 - y);
+     return getCanvasCoordinate(3, 2*16 -1 - x, 16 - 1 - y);
      default: throw new RangeError();
     }
    }
@@ -80,7 +80,7 @@ var Funkycube;
      case 0:
      return getCanvasCoordinate(2, x, y - 16);
      case 1:
-     return getCanvasCoordinate(4, y - 16, 16 - x - 1);
+     return getCanvasCoordinate(4, y - 16, 16 - 1 - x);
      case 2:
      return getCanvasCoordinate(4, x, y - 16);
      case 3:
