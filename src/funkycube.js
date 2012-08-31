@@ -1,5 +1,5 @@
-#ifndef PIXELOPS_JS
-#define PIXELOPS_JS
+#ifndef FUNKYCUBE_JS
+#define FUNKYCUBE_JS
 #include <assert.js> 
 
 #define CUBE_WIDTH 64
@@ -160,10 +160,13 @@ var Funkycube;
 		}
 
 		this.getCanvasCoordinate = getCanvasCoordinate; 
+		this.canvas = canvas; 
+		this.ctx = ctx; 
 	};
-
 }();
 
 
 #undef CUBE_WIDTH
+#undef FACE_WIDTH
+
 #endif 
